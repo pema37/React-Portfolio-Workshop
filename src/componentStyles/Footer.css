@@ -1,0 +1,86 @@
+/* Footer section  */
+.footer {
+  min-height: 20vh;
+  width: 100%;
+  background-color: #343434; 
+  color: #edf2f4; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  overflow: hidden; 
+  transition: background-color 0.5s ease;
+}
+
+.footer:hover {
+  background-color: #2d2d2d; /* Slightly lighter on hover for visual feedback */
+}
+
+.footer .footer-contact-info {
+  padding: 20px;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in effect for contact info */
+}
+
+.footer .footer-contact-info .footer-heading {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  animation: slideInFromLeft 1s ease-out forwards; /* Slide-in animation for headings */
+}
+
+.footer .footer-contact-info .footer-contact-access {
+  font-size: 1.4rem;
+  padding-top: 10px;
+  letter-spacing: .2rem;
+  margin-bottom: 10px; /* Adjusted to ensure consistent spacing */
+  animation: slideInFromRight 1s ease-out forwards; /* Slide-in animation for contact access */
+}
+
+.footer .social-icons a {
+  color: #edf2f4;
+  font-size: 3rem;
+  margin: 0.7rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for icon effects */
+}
+
+.footer .social-icons a:hover {
+  color: #ffffff; /* Brighter white on hover */
+  transform: translateY(-5px); /* Moves icon slightly up */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+  from { opacity: 0; transform: translateX(100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem; 
+  }
+
+  .footer .footer-contact-info .footer-heading,
+  .footer .footer-contact-info .footer-contact-access {
+    font-size: 2rem;
+  }
+
+  .footer .social-icons a {
+    font-size: 2.5rem; /* Smaller icons for a neat layout */
+  }
+}
+
+

@@ -1,0 +1,109 @@
+/* Projects section */
+
+#projectH2 {
+  font-size: 3rem;
+}
+
+
+.projects {
+  background-color: #343434; 
+  padding: 4rem 0; 
+  text-align: center;
+  transition: background-color 0.5s ease; /* Smooth background transition */
+  overflow-x: hidden; /* Fixes overflow issue by hiding horizontal overflow */
+}
+
+.projects:hover {
+  background-color: #2d2d2d; /* Lighter on hover for an interactive effect */
+}
+
+.heading {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease-out forwards; /* Consistent entrance animation for heading */
+}
+
+.projects-container {
+  max-width: 120rem;
+  margin: auto;
+  padding: 0 2rem; 
+}
+
+.project {
+  background-color: #2b2d42;
+  border-radius: 10px;
+  margin: 1rem;
+  overflow: hidden; /* Ensures content fits within the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+  width: 100%;
+  object-fit: cover; /* Ensures images cover the card area without distortion */
+}
+
+.name {
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+.description {
+  color: #dddddd;
+  padding: 0 1rem; /* Adds padding to the description for better readability */
+  margin-bottom: 1rem;
+}
+
+.project-button {
+  background-color: #ef233c;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 1rem; /* Ensures spacing at the bottom of the card */
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #d81e5b; /* Changes color on hover for a dynamic effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-container .project {
+    width: 90%; /* Allows the project cards to take more screen space on smaller devices */
+    margin: 1rem auto; /* Centers the cards */
+  }
+
+  .heading {
+    font-size: 2.5rem; /* Adjusts the heading size for smaller screens */
+  }
+
+  .description {
+    font-size: 1rem; /* Ensures text remains legible on smaller screens */
+  }
+
+  .project-button {
+    padding: 8px 16px; /* Adjusts the button size for smaller screens */
+  }
+}
+
+/* Keyframe animations for fadeInDown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

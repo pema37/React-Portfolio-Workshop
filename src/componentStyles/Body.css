@@ -1,0 +1,124 @@
+/* Body Section */
+.body {
+  background-color: #343434; /* Enhanced background color for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; 
+  min-height: 56rem; 
+  padding: 50px 0; 
+  color: #edf2f4; 
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.body:hover {
+  background-color: #2d2d2d; 
+}
+
+.body-container {
+  max-width: 120rem;
+  text-align: center; /* Centers the content within */
+  animation: fadeIn 1s ease-out forwards; /* Fade-in effect for the entire container */
+}
+
+.body-profile {
+  margin: auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: popIn 0.5s ease-out forwards; /* Pop-in animation for profile */
+}
+
+.body-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #edf2f4; /* Defined border to emphasize the avatar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  background-size: cover; /* Ensures image covers the entire area */
+  transition: transform 0.3s ease-out; /* Smooth scale transition */
+}
+
+.body-avatar:hover {
+  transform: scale(1.05); 
+}
+
+.body-content {
+  margin: 20px 0;
+  animation: slideUp 0.5s ease-out forwards; /* Slide-up effect for content */
+}
+
+.body-name {
+  font-size: 3rem; 
+  margin: 10px 0;
+  font-weight: bold; 
+}
+
+.body-job {
+  font-size: 1.6rem;
+  color: #aaaaaa; 
+  margin-bottom: 20px;
+}
+
+.body-socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+}
+
+.icon-link {
+  color: #edf2f4; 
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.icon-link:hover, .icon-link:focus {
+  color: #ffffff; /* Brighter white on hover for emphasis */
+  transform: translateY(-5px); /* Moves the icon slightly up */
+}
+
+@media (max-width: 768px) {
+  .body {
+    padding: 30px 10px; 
+  }
+  .body-avatar {
+    width: 130px;
+    height: 130px; 
+  }
+  .body-name {
+    font-size: 2.5rem; 
+  }
+  .body-job {
+    font-size: 1.4rem; 
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+/* Wiggle effect on Body-Avatar */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.body-avatar:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+

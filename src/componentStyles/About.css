@@ -1,0 +1,133 @@
+/* About Section */
+
+#AbtH2 { 
+  font-size: 3rem;
+}
+
+.about {
+  background-color: #343434;
+  color: #edf2f4;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease; /* Smooth transition for background color change */
+}
+
+.about:hover {
+  background-color: #2d2d2d; /* Slightly lighter on hover for a subtle effect */
+}
+
+.about-heading {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out; /* Fade-in-up animation for the heading */
+}
+
+
+.about-content {
+  display: flex;
+  flex-direction: column-reverse; /* Stack image above text on smaller screens */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Adds space between text and image */
+}
+
+
+.about-description {
+  font-size: 1.8rem;
+  line-height: 2;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  color: #cccccc;
+  animation: fadeIn 2s ease-out; /* Fade-in animation for description */
+}
+
+.about-image {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+  animation: scaleIn 1s cubic-bezier(0.2, 0.8, 0.2, 1); /* Scale-in animation for the image */
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 601px) {
+  .about-content {
+    flex-direction: row; /* Side-by-side layout for larger screens */
+    text-align: left;
+  }
+
+  .about-description, .about-image {
+    width: 50%;
+  }
+
+  .about-description {
+    text-align: start;
+  }
+}
+
+
+/* Responsive Adjustments with slight animation adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem;
+  }
+
+  .about-heading {
+    font-size: 3rem;
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+  .about-description {
+    font-size: 1.5rem;
+    animation: fadeIn 1.5s ease-out;
+  }
+
+  .about-image {
+    max-width: 300px;
+    margin-top: 2rem;
+    animation: scaleIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+
